@@ -1,0 +1,23 @@
+form{
+    display: flex;
+    flex-direction: column;
+    border: 5px;
+}
+main{
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    flex-direction: column;
+    align-items: center;
+}
+nav .a{
+    align-items: center;
+}
+section{
+    align-items: center;
+}
+.title{
+    align-items: center;
+    font-size: auto;
+}

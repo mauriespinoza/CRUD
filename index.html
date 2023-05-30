@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>CRUD Productos UDD</title>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Productos</a>
+        <a href="#">Login</a>
+    </nav>
+    <main>
+        <section>
+            <h1 class="title">
+                Mantenedor de Productos
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti itaque facilis consequatur dolorem
+                totam nisi, magnam, enim omnis quibusdam maxime a qui? Quia praesentium et voluptates eligendi ducimus
+                maiores fugit asperiores sit, veritatis temporibus necessitatibus possimus quod deleniti doloremque odit
+                tempora? Minima at aliquam dolorum eveniet esse possimus qui quas.</p>
+        </section>
+        <section>
+            <form id="form">
+                <!-- <div class="form-group row"> -->
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="codprod">Codigo Producto</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="codprod" id="txtCodProd" class="form-control" placeholder="Codigo Producto"> 
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="nameprod">Nombre Producto</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="nameprod" id="txtpNameProd" class="form-control" placeholder="Nombre Producto"> 
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="descprod">Descripcion Producto</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="nameprod" id="txtpDescProd" class="form-control" placeholder="Descripcion Producto">  
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="stockprod">Stock Producto</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="stockprod" id="txtStockProd" class="form-control" placeholder="Stock Producto" > 
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="unitpriceprod">Precio Unitario</label>
+                    <div class="col-sm-10">
+                        <input required type="text" name="unitpriceprod" id="txtUnitPriceProd" class="form-control" placeholder="Precio Unitario"> 
+                    </div>
+                </div>
+                    <!-- <label class="col-sm-2 col-form-label" for="nameprod">Nombre Producto</label>
+                    <input type="text" name="nameprod" id="txtpNameProd" class="form-control"> 
+
+                    <label class="col-sm-2 col-form-label" for="descprod">Descripcion Producto</label>
+                    <input type="text" name="descprod" id="txtDescProd" class="form-control"> 
+
+                    <label class="col-sm-2 col-form-label" for="stockprod">Stock Producto</label>
+                    <input type="text" name="stockprod" id="txtStockProd" class="form-control"> 
+
+                    <label class="col-sm-2 col-form-label" for="unitpriceprod">Precio Unitario</label>
+                    <input type="text" name="unitpriceprod" id="txtUnitPriceProd" class="form-control">  -->
+
+                    <!-- Submit button -->
+                    
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" onclick="addProduct()" class="btn btn-primary">Guardar</button>
+                        <!-- <button class="btn btn-primary" type="button">Button</button>
+                        <button class="btn btn-primary" type="button">Button</button> -->
+                    </div>
+                
+            </form>
+        </section>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Codigo Producto</th>
+                        <th>Nombre Producto</th>
+                        <th>Descripción Producto</th>
+                        <th>Stock</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyTable">
+            
+                </tbody>
+              </table>
+        </section>
+    </main>
+    <script src="js/Function_CRUD.js"></script>
+</body>
+</html>
