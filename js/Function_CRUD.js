@@ -21,12 +21,7 @@ createTable();
 function addProduct(){
     //e.preventDefault()
 
-    let id = Date.now()
-  
-    //valida si existe el producto 
-    //const index = products.findIndex((el) => el.id == idEditing);
-    //console.log("index: " + index);
-    //let isExits = products(index);
+    let id = Date.now();
     if(idEditing){
         console.log("exits product");
         const index = products.findIndex((el) => el.id == idEditing);
@@ -39,8 +34,6 @@ function addProduct(){
             unitPriceProd: unitPriceProd.value
       }; 
       products[index] = product;
-    //   saveStorage();
-    //   createTable();
       idEditing = null;
     } else{
         console.log("not exits product");
@@ -54,35 +47,11 @@ function addProduct(){
         }; 
         
         products.push(product);
-        // clearForm();
-        // saveStorage();
-        // createTable();
         idEditing = null;
     }
     clearForm();
     saveStorage();
     createTable();
-    // const product = {
-    //     id: idEditing,
-    //     title: title.value,
-    //     desc: desc.value,
-    //     completed: false
-    // }
-
-    // tareas[index] = tarea
-    //-----------------------
-    // const product= {
-    //   id,
-    //   codProd: codProd.value,
-    //   nameProd: nameProd.value,
-    //   descProd: descProd.value,
-    //   stockProd: stockProd.value,
-    //   unitPriceProd: unitPriceProd.value
-    // } 
-
-    // products.push(product);
-    // saveStorage();
-    // createTable();
 }
 
 function saveStorage () {
@@ -98,8 +67,10 @@ function createTable(){
         <td>${product.stockProd}</td>
         <td>${product.unitPriceProd}</td>
         <td>
-        <button onclick="editProduct(${product.id})">Editar</button>
-        <button onclick="deleteProduct(${product.id})">Eliminar</button>
+          <button onclick="editProduct(${product.id})" class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+          <button onclick="deleteProduct(${product.id})" class="btn btn-primary">Eliminar</button>
         </td>
         `
       });
