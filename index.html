@@ -5,27 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>CRUD Productos UDD</title>
 </head>
 <body>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Productos</a>
-        <a href="#">Login</a>
+        <img src="assets/img/crud.png" class="logo" alt="">
+        <!-- <h2>CRUD</h2> -->
     </nav>
     <main>
         <section>
             <h1 class="title text-center">
                 Mantenedor de Productos
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti itaque facilis consequatur dolorem
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti itaque facilis consequatur dolorem
                 totam nisi, magnam, enim omnis quibusdam maxime a qui? Quia praesentium et voluptates eligendi ducimus
                 maiores fugit asperiores sit, veritatis temporibus necessitatibus possimus quod deleniti doloremque odit
-                tempora? Minima at aliquam dolorum eveniet esse possimus qui quas.</p>
+                tempora? Minima at aliquam dolorum eveniet esse possimus qui quas.</p> -->
         </section>
         <section>
             <form id="form">
                 <!-- <div class="form-group row"> -->
+                <div class="input-group mb-1">
+                    <label class="col-sm-2 col-form-label" for="famprod">Familia Producto</label>
+                    <div class="col-sm-10">
+                        <!-- <input required type="text" name="famprod" id="txtFamiliaProd" class="form-control" placeholder="Codigo Producto">  -->
+                        <select required id="cmbFamiliaProd" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                          <option selected>Seleccione un tipo de Familia</option>
+                          <option value="Electrónica">Electrónica</option>
+                          <option value="Computación">Computación</option>
+                          <option value="Electrodomésticos">Electrodomésticos</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="input-group mb-1">
                     <label class="col-sm-2 col-form-label" for="codprod">Codigo Producto</label>
                     <div class="col-sm-10">
@@ -79,10 +91,27 @@
             </form>
         </section>
         <section>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <td>
+                  <div class="input-group mb-3">
+                    <label class="col-sm-2 col-form-label">Buscador</label>
+                    <input type="text" id="txtBuscar" class="form-control" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button" id="btnBuscar" onclick="searchProducts()">Buscar</button>
+                  </div>
+                  
+                </td>
+              </tr>
+            </thead>
+          </table>
+        </section>
+        <section>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Codigo Producto</th>
+                        <th>Familia Producto</th>
+                        <th>Código Producto</th>
                         <th>Nombre Producto</th>
                         <th>Descripción Producto</th>
                         <th>Stock</th>
