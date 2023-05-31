@@ -1,6 +1,6 @@
 # Proyecto-CRUD
 
-#  **Proyecto CRUD y DOM**
+#  **Proyecto Mantenedor Productos CRUD y DOM**
 ![github](crud.JPG)
 
 
