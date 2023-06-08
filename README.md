@@ -67,11 +67,4 @@ Herramientas utilizadas para crear el proyecto:
 ## Contribuir 🖇️
 
 Este proyecto es de código abierto y las contribuciones son bienvenidas. Puedes colaborar mejorando el diseño, agregando nuevas funcionalidades o corrigiendo errores. ¡Siéntete libre de enviar tus pull requests!
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para obtener más detalles.
-
-## Expresiones de gratitud 🎁
-
-Este archivo readme se ha desarrollado utilizando como referencia los siguientes proyectos:									  
+							  
