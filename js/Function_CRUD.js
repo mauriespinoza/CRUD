@@ -68,16 +68,16 @@ function createTable(){
    table.innerHTML ='';
     products.forEach( product => {
         table.innerHTML += `
-        <td>${product.familiaProd}</td>
-        <td>${product.codProd}</td>
-        <td>${product.nameProd}</td>
-        <td>${product.descProd}</td>
-        <td>${product.stockProd}</td>
-        <td>${product.unitPriceProd}</td>
-        <td>
+        <td data-label="Familia Producto">${product.familiaProd}</td>
+        <td data-label="Código Producto">${product.codProd}</td>
+        <td data-label="Nombre Producto">${product.nameProd}</td>
+        <td data-label="Descripción Producto">${product.descProd}</td>
+        <td data-label="Stock">${product.stockProd}</td>
+        <td data-label="Precio Unitario">${product.unitPriceProd}</td>
+        <td data-label="Editar">
           <button onclick="editProduct(${product.id})" class="btn btn-primary">Editar</button>
         </td>
-        <td>
+        <td data-label="Eliminar">
           <button onclick="deleteProduct(${product.id})" class="btn btn-primary">Eliminar</button>
         </td>
         `
@@ -87,16 +87,16 @@ function searchTable(prod){
   table.innerHTML ='';
   prod.forEach( product => {
        table.innerHTML += `
-       <td>${product.familiaProd}</td>
-       <td>${product.codProd}</td>
-       <td>${product.nameProd}</td>
-       <td>${product.descProd}</td>
-       <td>${product.stockProd}</td>
-       <td>${product.unitPriceProd}</td>
-       <td>
+       <td data-label="Familia Producto">${product.familiaProd}</td>
+       <td data-label="Código Producto">${product.codProd}</td>
+       <td data-label="Nombre Producto">${product.nameProd}</td>
+       <td data-label="Descripción Producto">${product.descProd}</td>
+       <td data-label="Stock">${product.stockProd}</td>
+       <td data-label="Precio Unitario">${product.unitPriceProd}</td>
+       <td data-label="Editar">
          <button onclick="editProduct(${product.id})" class="btn btn-primary">Editar</button>
        </td>
-       <td>
+       <td data-label="Eliminar">
          <button onclick="deleteProduct(${product.id})" class="btn btn-primary">Eliminar</button>
        </td>
        `
