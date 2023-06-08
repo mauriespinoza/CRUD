@@ -40,20 +40,24 @@ function addProduct(){
       }; 
       products[index] = product;
       idEditing = null;
-    } else{
-        console.log("not exits product");
-        const product= {
-              id,
-              familiaProd: familiaProd.value,
-              codProd: codProd.value,
-              nameProd: nameProd.value,
-              descProd: descProd.value,
-              stockProd: stockProd.value,
-              unitPriceProd: unitPriceProd.value
-        }; 
-        
+    } else {
+      console.log("not exits product");
+      if (codProd.value.length > 0 && nameProd.value.length > 0 && descProd.value.length > 0 && stockProd.value.length > 0 && unitPriceProd.value.length > 0) {
+        const product = {
+          id,
+          familiaProd: familiaProd.value,
+          codProd: codProd.value,
+          nameProd: nameProd.value,
+          descProd: descProd.value,
+          stockProd: stockProd.value,
+          unitPriceProd: unitPriceProd.value
+        };
+
         products.push(product);
         idEditing = null;
+      } else {
+        alert("Debe ingresar todos los datos requeridos");
+      }
     }
     clearForm();
     saveStorage();
